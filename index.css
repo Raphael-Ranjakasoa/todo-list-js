@@ -1,0 +1,165 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  color: white;
+  min-height: 100vh;
+}
+
+body form, body header {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body form input, body form button, body header input, body header button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: white;
+}
+
+body form button, body header button {
+  color: #d88771;
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+body form button:hover, body header button:hover {
+  background-color: #d88771;
+  color: white;
+}
+
+body form .select, body header .select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+body form .select::after, body header .select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #d88771;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body form .select:hover::after, body header .select:hover::after {
+  background-color: white;
+  color: #d88771;
+}
+
+body form .select select, body header .select select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  color: #d88771;
+  width: 10rem;
+  padding: 1.1rem;
+  cursor: pointer;
+}
+
+body .todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .todo-container .todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+body .todo-container .todo-list .todo {
+  margin: 0.5rem;
+  color: black;
+  background-color: white;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: none;
+          flex-direction: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body .todo-container .todo-list .todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .todo-container .todo-list .todo .complete-btn, body .todo-container .todo-list .todo .trash-btn {
+  background-color: #d88771;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+body .todo-container .todo-list .todo .complete-btn .fa-trash, body .todo-container .todo-list .todo .complete-btn .fa-check, body .todo-container .todo-list .todo .trash-btn .fa-trash, body .todo-container .todo-list .todo .trash-btn .fa-check {
+  pointer-events: none;
+}
+
+body .todo-container .todo-list .todo .complete-btn {
+  background-color: #22a016;
+}
+
+body .todo-container .todo-list .todo .todo-item {
+  padding: 0rem 0.5rem;
+}
+
+body .todo-container .todo-list .completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+body .todo-container .todo-list .fall {
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+          transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+/*# sourceMappingURL=index.css.map */

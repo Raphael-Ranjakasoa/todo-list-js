@@ -1,0 +1,110 @@
+$white_color : white;
+$color : #d88771;
+@mixin flexbox($dir, $justify, $align) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(120deg, #f6d365, #fda085);
+    color: $white_color;
+    min-height: 100vh;
+
+    form, header{
+        min-height: 20vh;
+        @include flexbox(none, center, center);
+        input, button{
+            padding: 0.5rem;
+            font-size: 2rem;
+            border: none;
+            background-color: $white_color;
+        }
+        button{
+            color: $color;
+            background-color: $white_color;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover{
+                background-color: $color;
+                color: $white_color;
+            } 
+        }
+        .select{
+            margin: 1rem;
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content: "\25BC";
+                position: absolute;
+                background-color: $color;
+                top: 0;
+                right: 0;
+                padding: 1rem;
+                pointer-events: none;
+                transition: all 0.3s ease;
+            }
+            &:hover::after{
+                background-color: $white_color;
+                    color: $color;
+            }
+            select{
+                appearance: none;
+                outline: none;
+                border: none;
+                color: $color;
+                width: 10rem;
+                padding: 1.1rem;
+                cursor: pointer;
+            } 
+        } 
+    }
+    .todo-container{
+        @include flexbox(none, center, center);
+        .todo-list{
+            min-width: 30%;
+            list-style: none;
+            .todo{
+                margin: 0.5rem;
+                color: black;
+                background-color: $white_color;
+                font-size: 1.5rem;
+                @include flexbox(none, space-between, center);
+                transition: all 0.5s ease;
+                li{
+                    flex: 1;
+                }
+                .complete-btn, .trash-btn{
+                    background-color: $color;
+                    color: $white_color;
+                    border: none;
+                    padding: 1rem;
+                    cursor: pointer;
+                    // Delete the event on the icons so that cannot be clicked
+                    .fa-trash, .fa-check{
+                        pointer-events: none;
+                    }
+                }
+                .complete-btn{
+                    background-color: rgb(34, 160, 22);
+                }
+                .todo-item{
+                    padding: 0rem 0.5rem;
+                }
+            }
+            .completed{
+                text-decoration: line-through;
+                opacity: 0.5;
+            }
+            .fall{
+                transform: translateY(8rem) rotateZ(20deg);
+                opacity: 0;
+            }
+        } 
+    }
+}
